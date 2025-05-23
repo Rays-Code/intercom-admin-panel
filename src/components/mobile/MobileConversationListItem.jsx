@@ -21,9 +21,9 @@ const MobileConversationListItem = ({avatorColor, name, message, time, userId}) 
 
         <div className='flex flex-col text-xl'>
             <div className='font-semibold'>{name}</div>
-            <div className='flex justify-between items-center text-base gap-5'>
+            <div className='flex justify-between items-center text-xs gap-5'>
                 <div className='w-[270px]'>{message.slice(0, 15) + ".."}</div>
-                <div className='text-[#646462] text-base mt-[1px]'>{time}</div>
+                <div className='text-[#646462] text-xs mt-[1px]'>{time}</div>
             </div>
         </div>
 

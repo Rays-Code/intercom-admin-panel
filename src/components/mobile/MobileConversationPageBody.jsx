@@ -29,7 +29,7 @@ const MobileConversationPageBody = () => {
         </div>
 
 
-        <input type='text' placeholder='Use ⌘K for shortcuts' value={message} className='rounded w-[365px] pb-12 pt-8 pr-8 pl-4 rounded-2xl text-lg mb-3 shadow-2xl focus:border-[#eeefec] bg-white'
+        <input type='text' placeholder='Use ⌘K for shortcuts' value={message} className='rounded w-[365px] pb-12 pt-8 pr-8 pl-4 rounded-2xl text-xs mb-3 shadow-2xl focus:border-[#eeefec] bg-white'
         onChange={(e) => {setMessage(e.target.value)
           setFocused(true)
         }} 

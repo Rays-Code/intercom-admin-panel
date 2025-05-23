@@ -5,14 +5,14 @@ const MobileConversationList = () => {
     <div className='px-5 pt-3 flex flex-col w-[100%] border-r border-[#eeefec] max-h-[700px] overflow-y-auto'>
         <div className='flex justify-between mx-2'>
             <div className='flex items-center'>
-                <span className="font-semibold cursor-pointer flex flex-row items-center gap-1 text-medium">5 Open</span>
+                <span className="font-semibold cursor-pointer flex flex-row items-center gap-1 text-xs">5 Open</span>
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 fill-current" viewBox="0 0 20 20">
                 <path d="M5.23 7.21a.75.75 0 011.06.02L10 11.17l3.71-3.94a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/>
                 </svg>
             </div>
 
             <div className='flex items-center'>
-                <span className="font-semibold cursor-pointer flex flex-row items-center gap-1 text-medium">Waiting longest</span>
+                <span className="font-semibold cursor-pointer flex flex-row items-center gap-1 text-xs">Waiting longest</span>
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 fill-current" viewBox="0 0 20 20">
                 <path d="M5.23 7.21a.75.75 0 011.06.02L10 11.17l3.71-3.94a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/>
                 </svg>

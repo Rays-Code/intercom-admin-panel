@@ -34,13 +34,13 @@ const MobileChatbotPanel = () => {
        <div className="flex flex-col justify-between bg-gradient-to-br from-[#FFFFFF] via-[#F3F7FD] to-[#FDF0F4]">
         <div className="flex justify-between items-center px-5 pt-4 pb-6 font-inter border-b border-r border-gray-300">
           <div className="flex gap-4 mt-3">
-            <div className="flex gap-1 text-gray-500 font-semibold text-xl bg-gradient-to-r from-[#3b82f6] to-[#8b5cf6] bg-clip-text text-transparent">
+            <div className="flex gap-1 text-gray-500 font-semibold text-xs bg-gradient-to-r from-[#3b82f6] to-[#8b5cf6] bg-clip-text text-transparent">
               <div>
                 <img src="/assets/images/blue_intercom_logo.webp" className="w-4 h-4 mt-[5px]"/>
               </div>
                 <div className="cursor-pointer">AI Copilot</div>
             </div>
-            <div className="text-gray-500 font-semibold text-xl cursor-pointer">Details</div>
+            <div className="text-gray-500 font-semibold text-xs cursor-pointer">Details</div>
           </div>
           <div className="cursor-pointer">
             <svg className="w-5 h-5 text-gray-800 mt-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -66,9 +66,9 @@ const MobileChatbotPanel = () => {
                 
                 <div className="flex gap-2 mb-3 ml-[2px]">
                   <img src="/assets/images/intercom-logo.webp" className="h-7 w-7"/>
-                  <span className="text-base font-bold">Fin</span>
+                  <span className="text-xs font-bold">Fin</span>
                 </div> 
-                <div className={`p-5 rounded-lg ml-8 text-base max-w-[320px] min-w-[260px] keep-all w-fit bg-gradient-to-br from-blue-200 via-purple-200 to-pink-100`}>
+                <div className={`p-5 rounded-lg ml-8 text-xs max-w-[320px] min-w-[260px] keep-all w-fit bg-gradient-to-br from-blue-200 via-purple-200 to-pink-100`}>
                 {chat.assistant}
                 </div>
               </div>
@@ -82,7 +82,7 @@ const MobileChatbotPanel = () => {
 
         <div className={`flex justify-center ${onClickHide? "hidden": "block"} mb-20 h-screen mt-78`}>
           <div className="flex flex-col items-center gap-3">
-            <div><img src="/assets/images/intercom-logo.webp" className="w-7 h-7"/></div>
+            <div><img src="/assets/images/intercom-logo.webp" className="w-6 h-6"/></div>
             <div className="flex flex-col items-center">
               <div className="font-bold">Hi, I'm Fin AI Copilot</div>
               <div>Ask me anything about this conversation</div>
@@ -91,7 +91,7 @@ const MobileChatbotPanel = () => {
         </div>
          <div className="flex justify-center">
           <div className="relative">
-            <input type="text" value={message} onChange={(e) => setMessage(e.target.value)} className="fixed bottom-0 right-0 rounded rounded-xl text-lg bg-white shadow-2xl pr-25 pl-5 py-4 mb-3 mr-8 border-2 border-[#eeefec] focus:border-indigo-600 outline-none" placeholder="Ask a question..." onKeyDown={(e) => {
+            <input type="text" value={message} onChange={(e) => setMessage(e.target.value)} className="fixed bottom-0 right-0 rounded rounded-xl text-xs bg-white shadow-2xl pr-25 pl-5 py-4 mb-3 mr-8 border-2 border-[#eeefec] focus:border-indigo-600 outline-none" placeholder="Ask a question..." onKeyDown={(e) => {
               if(e.key ==="Enter"){
                 getData();
                 setMessage("");
