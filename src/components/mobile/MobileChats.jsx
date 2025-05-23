@@ -30,7 +30,7 @@ const MobileChats = () => {
              {/* Map through toUser */}
              {chat.toUser.map((msg, i) => {
                 return <div className='flex items-center'>
-                            <div className={`flex justify-center items-center rounded-full text-white text-xs font-bold font-inter w-8 h-8 mt-8 bg-[#7c84e8]`}>
+                            <div className={`flex justify-center items-center rounded-full text-white text-xs font-bold font-inter w-8 h-8 mt-8 bg-[#e53945]`}>
                                 {"Luis"[0]}
                                 </div>
                         <div key={`toUser-${i}`} className='px-5 pt-3 pb-4 bg-[#eeefec] rounded-xl m-3 min-w-[280px] min-h-[75px] break-all w-fit'>
