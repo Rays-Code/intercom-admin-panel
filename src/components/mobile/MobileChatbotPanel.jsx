@@ -32,10 +32,10 @@ const MobileChatbotPanel = () => {
 
   return (
        <div className="flex flex-col justify-between bg-gradient-to-br from-[#FFFFFF] via-[#F3F7FD] to-[#FDF0F4]">
-        <div className="flex justify-between items-center pb-6 pt-3 px-4 font-inter border-b border-r border-gray-300">
+        <div className="flex justify-between items-center pb-4 pt-3 px-4 font-inter border-b border-r border-[#eeefec]">
           <div className="flex gap-4">
             <div className="flex gap-1 text-gray-500 font-semibold text-base bg-gradient-to-r from-[#3b82f6] to-[#8b5cf6] bg-clip-text text-transparent">
-              <div>
+              <div className="mt-[5px]">
                 <img src="/assets/images/blue_intercom_logo.webp" className="w-4 h-4"/>
               </div>
                 <div className="cursor-pointer">AI Copilot</div>
@@ -80,7 +80,7 @@ const MobileChatbotPanel = () => {
 
 
 
-        <div className={`flex justify-center ${onClickHide? "hidden": "block"} mb-20 h-screen mt-50`}>
+        <div className={`flex justify-center ${onClickHide? "hidden": "block"} mb-20 h-screen mt-52`}>
           <div className="flex flex-col items-center gap-3">
             <div><img src="/assets/images/intercom-logo.webp" className="w-6 h-6"/></div>
             <div className="flex flex-col items-center">
