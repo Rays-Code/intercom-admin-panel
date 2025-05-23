@@ -22,10 +22,10 @@ const MobileConversationPageBody = () => {
       <div>
         
       </div>
-      <div className='fixed left-0 bottom-0 ml-9 z-[9999]'>
-        <div className='flex gap-2 justify-center items-center absolute ml-4 mt-2 pt-[2px]'>
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mt-1" fill="currentColor" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-4 9H8V9h8v2zm2-4H6V5h12v2z" /></svg>
-          <span className='text-sm font-bold'>Chat</span>
+      <div className='fixed left-0 bottom-0 ml-6 z-[9999]'>
+        <div className='flex gap-2 justify-center items-center absolute ml-4 mb-2 mt-2 pt-[2px]'>
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 mt-1" fill="currentColor" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-4 9H8V9h8v2zm2-4H6V5h12v2z" /></svg>
+          <span className='text-xs font-bold'>Chat</span>
         </div>
 
 
@@ -54,9 +54,9 @@ const MobileConversationPageBody = () => {
         />
         <div>
           <div className='fixed flex gap-2 top-223 ml-3'>
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className='w-4 h-4'><path d="M13 2L4.5 12.5H11L9 22L18.5 10H12L13 2Z" fill="#333333" stroke="#333333" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"/></svg>
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="h-4 w-4"><path d="M5 3C5 2.44772 5.44772 2 6 2H18C18.5523 2 19 2.44772 19 3V21C19 21.3905 18.7693 21.7453 18.4118 21.9079C18.0542 22.0705 17.6299 22.0126 17.3289 21.7605L12 17.25L6.67105 21.7605C6.37014 22.0126 5.94584 22.0705 5.58824 21.9079C5.23065 21.7453 5 21.3905 5 21V3Z" fill="#333333"/><path d="M5 8H19V9.5H5V8Z" fill="#FFFFFF"/></svg>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" className='h-4 w-4' ><circle cx="32" cy="32" r="30" fill="black" /><circle cx="22" cy="24" r="4" fill="white" /><circle cx="42" cy="24" r="4" fill="white" /><path d="M20 40c3 4 9 6 12 6s9-2 12-6" fill="white" /></svg>
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className='w-2 h-2'><path d="M13 2L4.5 12.5H11L9 22L18.5 10H12L13 2Z" fill="#333333" stroke="#333333" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"/></svg>
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="h-2 w-2"><path d="M5 3C5 2.44772 5.44772 2 6 2H18C18.5523 2 19 2.44772 19 3V21C19 21.3905 18.7693 21.7453 18.4118 21.9079C18.0542 22.0705 17.6299 22.0126 17.3289 21.7605L12 17.25L6.67105 21.7605C6.37014 22.0126 5.94584 22.0705 5.58824 21.9079C5.23065 21.7453 5 21.3905 5 21V3Z" fill="#333333"/><path d="M5 8H19V9.5H5V8Z" fill="#FFFFFF"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" className='h-2 w-2' ><circle cx="32" cy="32" r="30" fill="black" /><circle cx="22" cy="24" r="4" fill="white" /><circle cx="42" cy="24" r="4" fill="white" /><path d="M20 40c3 4 9 6 12 6s9-2 12-6" fill="white" /></svg>
         </div>
 
 
