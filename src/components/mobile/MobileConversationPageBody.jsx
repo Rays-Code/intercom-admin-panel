@@ -53,7 +53,7 @@ const MobileConversationPageBody = () => {
         }}
         />
         <div>
-          <div className='fixed flex gap-2 left-0 bottom-0  ml-3'>
+          <div className='fixed flex gap-2 left-0 bottom-0 ml-9 mb-6'>
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className='w-2 h-2'><path d="M13 2L4.5 12.5H11L9 22L18.5 10H12L13 2Z" fill="#333333" stroke="#333333" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"/></svg>
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="h-2 w-2"><path d="M5 3C5 2.44772 5.44772 2 6 2H18C18.5523 2 19 2.44772 19 3V21C19 21.3905 18.7693 21.7453 18.4118 21.9079C18.0542 22.0705 17.6299 22.0126 17.3289 21.7605L12 17.25L6.67105 21.7605C6.37014 22.0126 5.94584 22.0705 5.58824 21.9079C5.23065 21.7453 5 21.3905 5 21V3Z" fill="#333333"/><path d="M5 8H19V9.5H5V8Z" fill="#FFFFFF"/></svg>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" className='h-2 w-2' ><circle cx="32" cy="32" r="30" fill="black" /><circle cx="22" cy="24" r="4" fill="white" /><circle cx="42" cy="24" r="4" fill="white" /><path d="M20 40c3 4 9 6 12 6s9-2 12-6" fill="white" /></svg>
