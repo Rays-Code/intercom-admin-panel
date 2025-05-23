@@ -80,7 +80,7 @@ const MobileChatbotPanel = () => {
 
 
 
-        <div className={`flex justify-center ${onClickHide? "hidden": "block"} mb-20 h-screen mt-52`}>
+        <div className={`flex justify-center ${onClickHide? "hidden": "block"} mb-20 h-screen mt-53`}>
           <div className="flex flex-col items-center gap-3">
             <div><img src="/assets/images/intercom-logo.webp" className="w-6 h-6"/></div>
             <div className="flex flex-col items-center">
