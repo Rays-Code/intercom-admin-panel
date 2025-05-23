@@ -21,18 +21,31 @@ const ChatBotPanel = () => {
                 }
               ])
 
-    // Getting the assistant's response
-    const data =  await getResponse(message)
+  try {
+    const data = await getResponse(message);
 
-    // updating the placeholder with actual response
-    setChats(chats => 
-      chats.map(chat => chat.id === id? {...chat, assistant: data} : chat)
-    )
+    // Replacing placeholder with actual assistant response
+    setChats(chats =>
+      chats.map(chat => (chat.id === id ? { ...chat, assistant: data } : chat))
+    );
+  } catch (error) {
+    console.error("Error fetching assistant response:", error);
 
+    // Showing error message in place of assistant's reply
+    setChats(chats =>
+      chats.map(chat =>
+        chat.id === id
+          ? { ...chat, assistant: "Sorry, something went wrong. Please try again." }
+          : chat
+      )
+    );
+  }
   }
 
   return (
     <div className="flex flex-col justify-between bg-gradient-to-br from-[#FFFFFF] via-[#F3F7FD] to-[#FDF0F4]">
+
+      {/* Header */}
         <div className="flex justify-between items-center px-5 pt-4 pb-5 font-inter border-b border-r border-[#eeefec]">
           <div className="flex gap-4">
             <div className="flex gap-1 text-gray-500 font-semibold text-sm bg-gradient-to-r from-[#3b82f6] to-[#8b5cf6] bg-clip-text text-transparent">
@@ -50,7 +63,9 @@ const ChatBotPanel = () => {
             </svg>
           </div>
         </div>
+        
 
+        {/* Chat History */}
         <div className={`flex flex-col overflow-y-auto pb-40 px-6 h-[calc(100vh-120px)] ${onClickHide? "block": "hidden"}  ml-4`}>
           {
             chats.map((chat, index) => {
@@ -61,7 +76,7 @@ const ChatBotPanel = () => {
                   </div>
                   <div className="flex flex-col mb-4 text-sm gap-1">
                   <span className="font-bold">You</span>
-                  <span className="text-gray-600">{chat.user}</span>
+                  <span className="text-gray-600 max-w-[320px] min-w-[360px] keep-all w-fit">{chat.user}</span>
                 </div> 
                 </div>
                 
@@ -77,10 +92,9 @@ const ChatBotPanel = () => {
           }
       
         </div>
-        
 
 
-
+        {/* Empty State */}
         <div className={`flex justify-center ${onClickHide? "hidden": "block"} mb-20`}>
           <div className="flex flex-col items-center gap-3">
             <div><img src="/assets/images/intercom-logo.webp" className="w-7 h-7"/></div>
@@ -90,6 +104,8 @@ const ChatBotPanel = () => {
             </div>
           </div>
         </div>
+
+        {/* Input Field */}
          <div className="flex justify-center">
           <div className="relative">
             <input type="text" value={message} onChange={(e) => setMessage(e.target.value)} className="fixed bottom-0 right-0 rounded rounded-xl bg-white shadow-2xl pr-50 pl-5 py-4 mb-3 mr-2 border-2 border-[#eeefec] focus:border-indigo-600 outline-none" placeholder="Ask a question..." onKeyDown={(e) => {

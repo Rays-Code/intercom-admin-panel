@@ -6,12 +6,14 @@ import MobileAvator from './MobileAvator'
 const MobileConversationListItem = ({avatorColor, name, message, time, userId}) => {
     const Navigate = useNavigate()
 
-    const [clicked, setclicked] = useState(false)
+    const [Isclicked, setIsclicked] = useState(false)
+
+    // Setting the user number to the userNumberContext based on the clicked chat.
     const { setUserNumber } = useContext(userNumberContext);
     
   return (
-    <div className={`flex gap-2 mt-5 cursor-pointer border-b border-[#eeefec] pb-2 px-2 p-1 rounded-lg ${clicked? 'bg-[#e8edf9] text-[#6e6e6e] px-3': 'text-black'}`} onClick={()=> {
-        setclicked(!clicked)
+    <div className={`flex gap-2 mt-5 cursor-pointer border-b border-[#eeefec] pb-2 px-2 p-1 rounded-lg ${Isclicked? 'bg-[#e8edf9] text-[#6e6e6e] px-3': 'text-black'}`} onClick={()=> {
+        setIsclicked(!Isclicked)
         setUserNumber(userId)
         Navigate("/chat")
         }}

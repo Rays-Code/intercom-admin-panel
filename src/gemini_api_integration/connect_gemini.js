@@ -1,6 +1,11 @@
 import { GoogleGenAI } from "@google/genai"
 
+// Google's Gemini LLM integeration
 const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+
+if (!apiKey) {
+  console.error("Gemini API key is missing. Please set VITE_GEMINI_API_KEY in your environment.");
+}
 
 const ai = new GoogleGenAI({ apiKey: apiKey})
 
@@ -75,7 +80,16 @@ A: Yes, Fin supports over 45 languages for both questions and answers.
 
 
 export async function getResponse(contents){
-    const response = await ai.models.generateContent({
+      if (!apiKey) {
+         return "Error: Gemini API key is not configured. Please contact the developer.";
+      }
+
+      if (!contents || typeof contents !== "string") {
+         return "Error: Invalid input. Please enter a valid question.";
+      }
+
+try{
+        const response = await ai.models.generateContent({
         model: "gemini-2.0-flash",
         contents: [
             {
@@ -88,7 +102,19 @@ export async function getResponse(contents){
         },
     })
 
+    // Defensive response handling
+    const textResponse = response?.text;
+    if (!textResponse || typeof textResponse !== "string") {
+      console.warn("Unexpected response format from Gemini:", response);
+      return "Sorry, I couldn't generate a proper response. Please try again.";
+    }
+
     return response.text
+} catch (error) {
+    console.error("Gemini API Error:", error);
+    return "Something went wrong while contacting the AI. Please try again later.";
+  }
+
 }
 
 

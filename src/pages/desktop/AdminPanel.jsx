@@ -1,9 +1,6 @@
-import React from 'react'
-import AppBar from '../../components/desktop/AppBar'
-import ChatBotPanel from '../../components/desktop/ChatBotPanel'
-import MessagesBar from '../../components/desktop/MessagesBar'
 import Body from '../../components/desktop/Body'
 
+// Admin panel for desktop
 const AdminPanel = () => {
   return (
     <div>

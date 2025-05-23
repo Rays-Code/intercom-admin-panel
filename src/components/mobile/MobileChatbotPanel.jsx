@@ -20,18 +20,32 @@ const MobileChatbotPanel = () => {
                 }
               ])
 
-    // Getting the assistant's response
-    const data =  await getResponse(message)
+  try {
+    const data = await getResponse(message);
 
-    // updating the placeholder with actual response
-    setChats(chats => 
-      chats.map(chat => chat.id === id? {...chat, assistant: data} : chat)
-    )
+    // Replacing placeholder with actual assistant response
+    setChats(chats =>
+      chats.map(chat => (chat.id === id ? { ...chat, assistant: data } : chat))
+    );
+  } catch (error) {
+    console.error("Error fetching assistant response:", error);
+
+    // Showing error message in place of assistant's reply
+    setChats(chats =>
+      chats.map(chat =>
+        chat.id === id
+          ? { ...chat, assistant: "Sorry, something went wrong. Please try again." }
+          : chat
+      )
+    );
+  }
 
   }
 
   return (
        <div className="flex flex-col justify-between bg-gradient-to-br from-[#FFFFFF] via-[#F3F7FD] to-[#FDF0F4]">
+
+        {/* Header */}
         <div className="flex justify-between items-center pb-4 pt-3 px-4 font-inter border-b border-r border-[#eeefec]">
           <div className="flex gap-4">
             <div className="flex gap-1 text-gray-500 font-semibold text-base bg-gradient-to-r from-[#3b82f6] to-[#8b5cf6] bg-clip-text text-transparent">
@@ -50,20 +64,24 @@ const MobileChatbotPanel = () => {
           </div>
         </div>
 
+        {/* Chat History */}
         <div className={`flex flex-col overflow-y-auto pb-40 px-6 h-[calc(100vh-120px)] ${onClickHide? "block": "hidden"}  ml-4`}>
           {
             chats.map((chat, index) => {
-              return <div className="flex flex-col mb-6 mt-5">
+              // add here
+              return <div className="flex flex-col mb-6 mt-5 " key={chat.index}>
+                {/* user */}
                 <div className="flex gap-2">
                   <div>
                     <img src="/assets/images/person_avator.avif" className="w-8 h-8 rounded-full"/>
                   </div>
                   <div className="flex flex-col mb-4 gap-1">
                   <span className="font-bold text-base">You</span>
-                  <span className="text-gray-600 text-xs">{chat.user}</span>
+                  <span className="text-gray-600 text-xs max-w-[320px] min-w-[260px] keep-all w-fi">{chat.user}</span>
                 </div> 
                 </div>
                 
+                {/* assistant */}
                 <div className="flex gap-2 mb-3 ml-[2px]">
                   <img src="/assets/images/intercom-logo.webp" className="h-7 w-7"/>
                   <span className="text-base font-bold">Fin</span>
@@ -79,7 +97,7 @@ const MobileChatbotPanel = () => {
         
 
 
-
+        {/* Empty State */}
         <div className={`flex justify-center ${onClickHide? "hidden": "block"} mb-20 h-screen mt-53`}>
           <div className="flex flex-col items-center gap-3">
             <div><img src="/assets/images/intercom-logo.webp" className="w-6 h-6"/></div>
@@ -89,6 +107,8 @@ const MobileChatbotPanel = () => {
             </div>
           </div>
         </div>
+
+        {/* Input Field */}
          <div className="flex justify-center">
           <div className="relative">
             <input type="text" value={message} onChange={(e) => setMessage(e.target.value)} className="fixed bottom-0 right-0 rounded rounded-xl text-xs bg-white shadow-2xl pr-25 pl-5 py-4 mb-3 mr-10 border-2 border-[#eeefec] focus:border-indigo-600 outline-none" placeholder="Ask a question..." onKeyDown={(e) => {

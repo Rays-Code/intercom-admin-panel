@@ -6,10 +6,16 @@ const MobileAppBar = () => {
 
   return (
     <div className="flex justify-between gap-2 pb-6 pt-3 px-4 font-inter border-b border-[#eeefec] w-full">
+
+        {/* Left side: Inbox title and user name */}
         <div className="flex gap-4">
+
+        {/* Clickable title to navigate to home ("/") */}
         <div className="font-bold text-base cursor-pointer" onClick={() => Navigate("/")}>Your inbox</div>
         <div className="font-bold text-base cursor-pointer">Luis Easton</div>
         </div>
+
+        {/* Right side: AI Copilot button to navigate to chatbot section*/}
         <div className="font-bold text-base cursor-pointer mt-1" onClick={() => {
             Navigate("/chatbot/fin")
         }}>

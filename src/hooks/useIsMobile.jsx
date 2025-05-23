@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 
+// hook to check the screen size of the device - for conditional rendering in App.jsx
 const useIsMobile = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
 

@@ -3,6 +3,8 @@ import MobileConversationListItem from './MobileConversationListItem'
 const MobileConversationList = () => {
   return (
     <div className='px-5 pt-3 flex flex-col w-[100%] border-r border-[#eeefec] max-h-[700px] overflow-y-auto'>
+
+        {/* Header Filters */}
         <div className='flex justify-between mx-2'>
             <div className='flex items-center'>
                 <span className="font-semibold cursor-pointer flex flex-row items-center gap-1 text-xs">5 Open</span>
@@ -19,6 +21,8 @@ const MobileConversationList = () => {
             </div>
         </div>
 
+
+        {/* Chat List */}
         <MobileConversationListItem avatorColor={"Blue"} name={"Luis ∙ GitHub"} message={"Hey! I have idea.."} time={"45m"} userId={1}/>
         <MobileConversationListItem avatorColor={"Red"} name={"Ivan ∙ Nike"} message={"Hi there, I have a"} time={"30m"} userId={2}/>
         <MobileConversationListItem avatorColor={"Blue"} name={"Lead from New York"} message={"Good Morning, let me.."} time={"40m"} userId={3}/>
@@ -26,7 +30,7 @@ const MobileConversationList = () => {
         <MobileConversationListItem avatorColor={"Gray"} name={"Miracle ∙ Exemplary Bank"} message={"Hey there, I'm here to.."} time={"45m"} userId={5}/>
 
 
-
+        {/* Bottom Toolbar */}
         <div className='mt-58 flex gap-2 rounded-lg shadow-lg p-2 w-[75px] cursor-pointer fixed bottom-0 left-0 ml-4 mb-3 bg-white'>
         <div className='shadow-sm bg-[#dcdcda] rounded px-1 py-1'>
            <svg class="w-5 h-5" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
