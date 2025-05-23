@@ -34,7 +34,7 @@ const MobileChats = () => {
 
              {/* Mapping through toUser */}
              {chat.toUser.map((msg, i) => {
-                return <div className='flex items-center ml-4'>
+                return <div className='flex items-center ml-5'>
                             <div className={`flex justify-center items-center rounded-full text-white text-xs font-bold font-inter w-8 h-8 mt-8 bg-[#e53945]`}>
                                 {"Luis"[0]}
                                 </div>
@@ -51,7 +51,7 @@ const MobileChats = () => {
              
              {/* Mapping through fromUser */}   
              {chat.fromUser.map((msg, i) => {
-                return <div className='flex items-center ml-18'>
+                return <div className='flex items-center ml-10'>
                     <div key={`from-${i}`} className='flex flex-col pl-5 pt-3 pb-2 pr-3 bg-[#c7d4f5] rounded-xl m-3 min-w-[280px] min-h-[75px] keep-all w-fit'>
                       <div className='text-xs'>{msg}</div>
                       <div className='mt-2 text-xs ml-42 text-[#6b7280] '>Seen ∙ 1min</div>
