@@ -1,0 +1,12 @@
+@font-face{
+  font-family: 'Inter';
+  src: url("/assets/fonts/Inter24pt-Regular.woff") format('woff'); 
+}
+
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@theme{
+  --font-inter: "Inter", sans-serif;
+}

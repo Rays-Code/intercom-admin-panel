@@ -1,0 +1,43 @@
+# Node.js dependencies
+node_modules/
+
+# Vite build output
+dist/
+
+# Local environment variables
+.env
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# macOS system files
+.DS_Store
+
+# VSCode settings (optional)
+.vscode/
+
+# Optional IDE folders
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Coverage reports
+coverage/
+
+# Optional: OS or editor backup files
+*.log
+*.bak
+*.tmp
+*.old
+*.orig
+
+# Optional: JetBrains IDEs
+*.iml
