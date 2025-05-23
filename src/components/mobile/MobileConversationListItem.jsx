@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import Avator from '../desktop/Avator'
 import { userNumberContext } from '../../contexts/userContext'
+import MobileAvator from './MobileAvator'
 
 const MobileConversationListItem = ({avatorColor, name, message, time, userId}) => {
     const Navigate = useNavigate()
@@ -17,12 +17,12 @@ const MobileConversationListItem = ({avatorColor, name, message, time, userId}) 
         }}
         > 
 
-        <Avator name={name} avatorColor={avatorColor}/>
+        <MobileAvator name={name} avatorColor={avatorColor}/>
 
         <div className='flex flex-col text-xs'>
             <div className='font-semibold'>{name}</div>
             <div className='flex justify-between items-center text-xs gap-5'>
-                <div className='w-[270px]'>{message.slice(0, 15) + ".."}</div>
+                <div className='w-[260px]'>{message.slice(0, 15) + ".."}</div>
                 <div className='text-[#646462] text-xs mt-[1px]'>{time}</div>
             </div>
         </div>
