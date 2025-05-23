@@ -1,6 +1,6 @@
 import { useContext, useState } from 'react'
 import Chats from './Chats'
-import { userContext, userNumberContext } from '../contexts/userContext'
+import { userContext, userNumberContext } from '../../contexts/userContext'
 
 const ConversationPageBody = () => {
   const [focused, setFocused] = useState(false)

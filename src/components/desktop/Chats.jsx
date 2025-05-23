@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { userContext, userNumberContext} from '../contexts/userContext'
+import { userContext, userNumberContext} from '../../contexts/userContext'
 import Avator from './Avator';
 
 const Chats = () => {

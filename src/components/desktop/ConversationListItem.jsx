@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import Avator from './Avator'
-import { userNumberContext } from '../contexts/userContext'
+import { userNumberContext } from '../../contexts/userContext'
 
 const ConversationListItem = ({avatorColor, name, message, time, userId}) => {
     const [clicked, setclicked] = useState(false)

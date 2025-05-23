@@ -1,0 +1,27 @@
+import { useNavigate } from "react-router-dom"
+
+
+const MobileAppBar = () => {
+    const Navigate = useNavigate()
+
+  return (
+    <div className="flex justify-between gap-2 p-8 font-inter border-b border-gray-400 w-full">
+        <div className="flex gap-4">
+        <div className="font-bold text-xl cursor-pointer" onClick={() => Navigate("/")}>Your inbox</div>
+        <div className="font-bold text-xl cursor-pointer">Luis Easton</div>
+        </div>
+        <div className="font-bold text-xl cursor-pointer" onClick={() => {
+            Navigate("/chatbot/fin")
+        }}>
+             <div className="flex gap-1 text-gray-500 font-semibold text-xl bg-gradient-to-r from-[#3b82f6] to-[#8b5cf6] bg-clip-text text-transparent">
+              <div>
+                <img src="/assets/images/blue_intercom_logo.webp" className="w-4 h-4 mt-[5px]"/>
+              </div>
+                <div className="cursor-pointer">AI Copilot</div>
+            </div>
+        </div>
+    </div>
+  )
+}
+
+export default MobileAppBar
