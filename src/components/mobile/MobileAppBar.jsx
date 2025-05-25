@@ -5,7 +5,7 @@ const MobileAppBar = () => {
     const Navigate = useNavigate()
 
   return (
-    <div className="flex justify-between gap-2 pb-6 pt-3 px-4 font-inter border-b border-[#eeefec] w-full">
+    <div className="flex justify-between gap-2 pb-6 pt-3 px-4 font-inter border-b border-[#eeefec] w-full bg-white">
 
         {/* Left side: Inbox title and user name */}
         <div className="flex gap-4">

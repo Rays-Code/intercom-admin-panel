@@ -2,7 +2,7 @@ import MobileConversationListItem from './MobileConversationListItem'
 
 const MobileConversationList = () => {
   return (
-    <div className='px-5 pt-3 flex flex-col w-[100%] border-r border-[#eeefec] max-h-[700px] overflow-y-auto'>
+    <div className='px-5 pt-3 flex flex-col w-[100%] border-r border-[#eeefec] max-h-[700px] overflow-y-auto bg-white'>
 
         {/* Header Filters */}
         <div className='flex justify-between mx-2'>

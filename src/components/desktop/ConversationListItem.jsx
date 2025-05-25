@@ -9,7 +9,7 @@ const ConversationListItem = ({avatorColor, name, message, time, userId}) => {
     const { setUserNumber } = useContext(userNumberContext);
 
   return (
-    <div className={`flex gap-2 mt-3 cursor-pointer border-b border-[#eeefec] pb-2 px-2 p-1 rounded-lg ${Isclicked? 'bg-[#e8edf9] text-[#6e6e6e]': 'text-black'}`} onClick={()=> {
+    <div className={`flex gap-2 mt-3 cursor-pointer border-b border-[#eeefec] pb-2 px-2 p-1 rounded-lg bg-white ${Isclicked? 'bg-[#e8edf9] text-[#6e6e6e]': 'text-black'}`} onClick={()=> {
         setIsclicked(!Isclicked)
         setUserNumber(userId)
         }}> 

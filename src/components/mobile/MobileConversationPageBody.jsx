@@ -11,7 +11,7 @@ const MobileConversationPageBody = () => {
 
 
   return (
-    <div className="relative overflow-y-auto w-full max-w-[425px] border-r border-[#eeefec] flex flex-col justify-between items-center">
+    <div className="relative overflow-y-auto w-full max-w-[425px] border-r border-[#eeefec] flex flex-col justify-between items-center bg-white">
 
       {/* Mobile Navigation bar at the top */}
       <MobileAppBar />

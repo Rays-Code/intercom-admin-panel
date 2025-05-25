@@ -1,7 +1,7 @@
 
 const AppBar = () => {
   return (
-    <div className="px-5 pt-2 pb-4 font-inter border-b border-r border-[#eeefec]">
+    <div className="px-5 pt-2 pb-4 font-inter border-b border-r border-[#eeefec] bg-white">
          {/* Top Navigation Bar */}
         <div className='flex justify-between'>
 

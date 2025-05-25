@@ -3,7 +3,7 @@ import ConversationListItem from './ConversationListItem'
 
 const ConversationList = () => {
   return (
-    <div className='px-5 pt-3 flex flex-col w-[30%] border-r border-[#eeefec] max-h-[700px] overflow-y-auto'>
+    <div className='px-5 pt-3 flex flex-col w-[30%] border-r border-[#eeefec] max-h-[700px] overflow-y-auto bg-white'>
 
        {/* Header Filters */}
         <div className='flex justify-between'>
